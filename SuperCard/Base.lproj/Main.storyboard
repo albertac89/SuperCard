@@ -20,9 +20,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1no-3L-3ec" customClass="PlayingCardView">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="93" y="140" width="214" height="319"/>
                                 </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="o6c-gU-pmA" appends="YES" id="EOd-L8-kw3"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -38,10 +42,15 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="playnigCardView" destination="1no-3L-3ec" id="oWn-Ak-ZjJ"/>
+                        <outlet property="playingCardView" destination="1no-3L-3ec" id="lWS-ZI-oat"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="o6c-gU-pmA">
+                    <connections>
+                        <action selector="swipe:" destination="BYZ-38-t0r" id="poB-vb-zeN"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="564" y="445"/>
         </scene>
